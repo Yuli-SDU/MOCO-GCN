@@ -13,4 +13,4 @@ utils.py: Supporting functions
 
 Random Forest:  The 25-repeat stratified fourfold cross-validation random forest
 
-Differential abundant test.r: The analysis of differential abundance testing
+Differential abundance test.r: The analysis of differential abundance testing
