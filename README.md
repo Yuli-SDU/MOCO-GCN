@@ -4,8 +4,13 @@ MOCO-GCN consists of two main components: a Two-view Co-training Graph Convoluti
 Files
 
 main_MOCO-GCN.py: MOCO-GCN for the prediction of PDAC
+
 models.py: MOCO-GCN model
+
 train_test.py: The training and test functions
+
 utils.py: Supporting functions
+
 Random Forest:  The 25-repeat stratified fourfold cross-validation random forest
+
 Differential abundant test.r: The analysis of differential abundance testing
