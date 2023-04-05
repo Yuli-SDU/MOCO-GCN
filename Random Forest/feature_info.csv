@@ -1,0 +1,29 @@
+feature,type,plot_name
+age_old,lifestyle,Seniors (>60)
+smoking,lifestyle,Smoker
+alcohol,lifestyle,Ever drinker
+diabetes,Disease,Diabetes
+obesity,lifestyle,Obese (BMI>30)
+asthma,Disease,Asthma
+nasal,lifestyle,Nasal allergies
+acid,Disease,Acid reflux
+heartburn,Disease,Heartburn
+allrheum,Disease,Rheumatoid arthritis
+acid_med,lifestyle,Acid regurgitation medication use
+antibiotic,lifestyle,Antibiotics
+asparmed,lifestyle,Aspirin medication use
+paracetamol,lifestyle,Paracetamol use
+cholmedication,lifestyle,Cholesterol medication use
+cortmed,lifestyle,Corticosteroids medication
+probiotic,lifestyle,Pro/prebiotics
+periodontitis,Disease,Periodontitis
+recession,Disease,Receding gums
+FHPDAC,lifestyle,FHPDAC
+Jaundice,Disease,Jaundice
+country,lifestyle,Country
+cholesterol,Disease,High blood pressure
+allhburn,Disease,Heartburn1
+gender,lifestyle,Gender
+salicylic_med,lifestyle,Salicylic medication use
+PDACmatched,Disease,PDACmatched
+PDACunmatched,Disease,PDACunmatched
