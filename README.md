@@ -38,7 +38,7 @@ Then, unzip the file and go to the folder.
 	        unzip main.zip && rm -rf main.zip
 	        cd ./MOCO-GCN-main
 		
-##Running
+## Running
       
 ```
 $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
