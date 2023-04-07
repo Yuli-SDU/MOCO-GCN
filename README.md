@@ -3,7 +3,11 @@ MOCO-GCN, a framework for classification tasks with exposome and gut microbiome 
 
 ![](/MOCO-GCN.png)
 
-Files
+```
+$ python xxx.py
+```
+
+# Files
 
 main_MOCO-GCN.py: MOCO-GCN for the prediction of PDAC
 
@@ -17,6 +21,4 @@ Random Forest:  The 25-repeat stratified fourfold cross-validation random forest
 
 Differential abundance test.r: The analysis of differential abundance testing
 
-```
-$ python xxx.py
-```
+
