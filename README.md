@@ -1,5 +1,7 @@
 # MOCO-GCN
+
 ## Description
+
 MOCO-GCN, a framework for classification tasks with exposome and gut microbiome data. The model is mainly composed of a Two-view Co-training Graph Convolutional Networks (GCNs) module for learning microbiome and exposome data features and improve the generalization ability of the GCN through the cooperation among multiple learners, and a View Correlation Discovery Network (VCDN) module for multi-omics data integration.
 
 ![](/MOCO-GCN.png)
@@ -38,11 +40,13 @@ Then, unzip the file and go to the folder.
 	        unzip main.zip && rm -rf main.zip
 	        cd ./MOCO-GCN-main
 		
+		
 ## Running
       
 ```
 $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 ```
+
 ### File descriptions
 `-input`: A data foler includes `X.csv` and `Y.csv`. `X.csv` is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data. `Y.csv` is pancreatic cancer label.
 
@@ -52,6 +56,7 @@ $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 |host1|0.05|0.02|...|1|1|...|
 |host1|0|0.03|...|1|0|...|
 |...|...|
+
 
 ## Others
 
@@ -66,6 +71,10 @@ $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 -num_view: the number of multi-omics data type;
 
 -adj_parameter: the average number of edges retained per node in graph convolutional networks (>1).
+
+## About the seed
+
+We use the seed 0 to split the dataset and build the model to make sure that the results are reproducible. The seed can be changed by changing the `seed` variable in the `main_MOCO-GCN.py` scripts.
 
 ## Files
 
