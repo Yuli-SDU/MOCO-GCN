@@ -10,6 +10,15 @@ from utils import (cal_sample_weight,
                     one_hot_tensor)
 import random
 cuda = True if torch.cuda.is_available() else False
+import argparse
+
+#parser argument
+parser = argparse.ArgumentParser(description='The data folder: X.csv is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data'
+                                             'Y.csv is pancreatic cancer label')
+parser.add_argument('-input', default=None, help='X.csv (The microbiome and exposome features as columns and samples as rows, the last 6 or 23 rows are exposome data'
+                                                 'Y.csv (pancreatic cancer label)')
+
+args = parser.parse_args()
 
 
 if __name__ == '__main__':
@@ -25,7 +34,7 @@ if __name__ == '__main__':
 
 
     seed_torch()
-    data_folder = '125ASV_6variables'
+    data_folder = args.input
     num_epoch_pretrain = 200
     num_epoch = 2000
     lr_e_pretrain = 1e-3
