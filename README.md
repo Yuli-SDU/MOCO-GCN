@@ -1,5 +1,6 @@
 # MOCO-GCN
 
+
 ## Description
 
 MOCO-GCN, a framework for classification tasks with exposome and gut microbiome data. The model is mainly composed of a Two-view Co-training Graph Convolutional Networks (GCNs) module for learning microbiome and exposome data features and improve the generalization ability of the GCN through the cooperation among multiple learners, and a View Correlation Discovery Network (VCDN) module for multi-omics data integration.
@@ -7,6 +8,7 @@ MOCO-GCN, a framework for classification tasks with exposome and gut microbiome 
 ![](/MOCO-GCN.png)
 
 ## Usage
+
 
 ### Dependencies
 
@@ -28,7 +30,10 @@ The following packages are required for MOCO-GCN.
         conda install numpy
         conda install random
    
+   
+   
  ### Installation
+ 
 The source code of MOCO-GCN is freely available at https://github.com/Yuli-SDU/MOCO-GCN. To install MOCO-GCN, you can download the zip file manually from GitHub, or use the code below in Unix.
    	 
 	        cd /your working path/ 
@@ -43,11 +48,14 @@ Then, unzip the file and go to the folder.
 		
 ## Running
       
+      
 ```
 $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 ```
 
+
 ### File descriptions
+
 `-input`: A data foler includes `X.csv` and `Y.csv`. `X.csv` is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data. `Y.csv` is pancreatic cancer label. `X.csv` looks like:
 
 |SampleID|microbe1|microbe2|...|exposusre1|exposure2|...|
@@ -67,6 +75,8 @@ $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 
 Notice that the original microbiome data is available at **./Random Forest/OTU_data.xlsx**, the exposome data is available at **./supplementary table/supplementary table 1.csv**. The feature binary cohorts are available at **./Random Forest/Feature_Cohorts/binary_cohorts**.
 
+
+
 ## Others
 
 ### Parameter description
@@ -81,9 +91,13 @@ Notice that the original microbiome data is available at **./Random Forest/OTU_d
 
 -adj_parameter: the average number of edges retained per node in graph convolutional networks (>1).
 
+
+
 ## About the seed
 
 We use the seed 0 to split the dataset and build the model to make sure that the results are reproducible. The seed can be changed by changing the `seed` variable in the `main_MOCO-GCN.py` scripts.
+
+
 
 ## Files
 
