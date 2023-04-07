@@ -11,11 +11,11 @@ MOCO-GCN, a framework for classification tasks with exposome and gut microbiome 
 The following packages are required for MOCO-GCN.
 
  - python 3.7+
-        - pytorch 1.3.0+cpu
-        - scikit-learn == 1.0.2
-        - torch-scatter == 1.3.2
- 	      - torch-sparse == 0.4.3
-        - torch-cluster  == 1.4.5
+ 	- pytorch 1.3.0+cpu
+ 	- torch-scatter == 1.3.2
+ 	- torch-sparse == 0.4.3
+ 	- torch-cluster  == 1.4.5
+ 	- scikit-learn == 1.0.2     
         
  Please install these dependencies.
  
