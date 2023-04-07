@@ -48,7 +48,7 @@ $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 ```
 
 ### File descriptions
-`-input`: A data foler includes `X.csv` and `Y.csv`. `X.csv` is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data. `Y.csv` is pancreatic cancer label. Notice that the original microbiome data is available at **./Random Forest/OTU.csv**, the exposome data is available at **./supplementary table/supplementary table 1.csv**.
+`-input`: A data foler includes `X.csv` and `Y.csv`. `X.csv` is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data. `Y.csv` is pancreatic cancer label. `X.csv` looks like:
 
 |SampleID|microbe1|microbe2|...|exposusre1|exposure2|...|
 |---|---|---|---|---|---|---|
@@ -57,6 +57,15 @@ $ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 |host1|0|0.03|...|1|0|...|
 |...|...|
 
+`Y.csv` looks like:
+|SampleID|lable|
+|---|---|
+|host1|0|
+|host1|1|
+|host1|0|
+|...|...|
+
+Notice that the original microbiome data is available at **./Random Forest/OTU_data.xlsx**, the exposome data is available at **./supplementary table/supplementary table 1.csv**. The feature binary cohorts are available at **./Random Forest/Feature_Cohorts/binary_cohorts**.
 
 ## Others
 
