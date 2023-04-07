@@ -30,19 +30,44 @@ The following packages are required for MOCO-GCN.
 The source code of MOCO-GCN is freely available at https://github.com/Yuli-SDU/MOCO-GCN. To install MOCO-GCN, you can download the zip file manually from GitHub, or use the code below in Unix.
    	 
 	        cd /your working path/ 
-	        wget https://github.com/OSU-BMBL/micah/archive/refs/heads/master.zip
+	        wget https://github.com/Yuli-SDU/MOCO-GCN/archive/refs/heads/main.zip
 
 
 Then, unzip the file and go to the folder.
 
-	unzip master.zip && rm -rf master.zip
-	cd ./micah-master
-        
+	        unzip main.zip && rm -rf main.zip
+	        cd ./MOCO-GCN-main
+		
+##Running
+      
 ```
-$ python xxx.py
+$ python ./main_MOCO-GCN.py -input ./125ASV_6variables
 ```
+### File descriptions
+`-input`: A data foler includes `X.csv` and `Y.csv`. `X.csv` is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data. `Y.csv` is pancreatic cancer label.
 
-# Files
+|SampleID|microbe1|microbe2|...|exposusre1|exposure2|...|
+|---|---|---|---|---|---|---|
+|host1|0|0.01|...|0|1|...|
+|host1|0.05|0.02|...|1|1|...|
+|host1|0|0.03|...|1|0|...|
+|...|...|
+
+## Others
+
+### Parameter description
+
+-num_epoch: the number of iteration while training the graph convolutional networks;
+
+-lr: the learning rate while training the graph convolutional networks;
+
+-num_class: the number of categories of sample labels;
+
+-num_view: the number of multi-omics data type;
+
+-adj_parameter: the average number of edges retained per node in graph convolutional networks (>1).
+
+## Files
 
 main_MOCO-GCN.py: MOCO-GCN for the prediction of PDAC
 
