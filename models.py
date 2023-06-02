@@ -41,7 +41,6 @@ class GCN_E(nn.Module):
         self.gc1 = GraphConvolution(in_dim, hgcn_dim[0])
         self.gc2 = GraphConvolution(hgcn_dim[0], hgcn_dim[1])
         self.gc3 = GraphConvolution(hgcn_dim[1], hgcn_dim[2])
-        self.gc4 = GraphConvolution(hgcn_dim[2], hgcn_dim[3])
         self.dropout = dropout
 
     def forward(self, x, adj):
@@ -53,9 +52,7 @@ class GCN_E(nn.Module):
         x = F.dropout(x, self.dropout, training=self.training)
         x = self.gc3(x, adj)
         x = F.leaky_relu(x, 0.25)
-        x = F.dropout(x, self.dropout, training=self.training)
-        x = self.gc4(x, adj)
-        x = F.leaky_relu(x, 0.25)
+       
         return x
 
 def cotraining(optim_dict, data_list, model_dict, criterion, sample_weight, label, adj_list, loss_dict):
