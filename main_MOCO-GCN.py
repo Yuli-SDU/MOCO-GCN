@@ -13,9 +13,9 @@ cuda = True if torch.cuda.is_available() else False
 import argparse
 
 #parser argument
-parser = argparse.ArgumentParser(description='The data folder: X.csv is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data'
+parser = argparse.ArgumentParser(description='The data folder: X.csv is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 23 rows are exposome data'
                                              'Y.csv is pancreatic cancer label')
-parser.add_argument('-input', default=None, help='X.csv (The microbiome and exposome features as columns and samples as rows, the last 6 or 23 rows are exposome data'
+parser.add_argument('-input', default=None, help='X.csv (The microbiome and exposome features as columns and samples as rows, the last 23 rows are exposome data'
                                                  'Y.csv (pancreatic cancer label)')
 
 args = parser.parse_args()
@@ -38,14 +38,14 @@ if __name__ == '__main__':
     num_epoch_pretrain = 200
     num_epoch = 2000
     lr_e_pretrain = 1e-3
-    lr_e = 5e-2
-    lr_c = 1e-3
+    lr_e = 1e-2
+    lr_c = 1e-2
     num_class = 2
     num_view = 2
     dim_hvcdn = pow(num_class, num_view)
     adj_parameter = 8
-    dim_he_list = [200, 200, 100, 100]
-    kf = KFold(n_splits=5)
+    dim_he_list = [200, 200, 100]
+    kf = KFold(n_splits=4)
     X = np.loadtxt(os.path.join(data_folder, "X.csv"), delimiter=',')
     y = np.loadtxt(os.path.join(data_folder, "Y.csv"), delimiter=',')
     all_roc = []
@@ -59,9 +59,9 @@ if __name__ == '__main__':
         data_tr_list = []
         data_te_list = []
         data_te_list.append(X[test][:, 0:125])
-        data_te_list.append(X[test][:, 125:131])
+        data_te_list.append(X[test][:, 125:148])
         data_tr_list.append(X[train][:, 0:125])
-        data_tr_list.append(X[train][:, 125:131])
+        data_tr_list.append(X[train][:, 125:148])
         num_tr = data_tr_list[0].shape[0]
         num_te = data_te_list[0].shape[0]
         data_mat_list = []
