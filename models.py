@@ -233,7 +233,7 @@ def init_model_dict(num_view, num_class, dim_list, dim_he_list, dim_hc, gcn_dopo
     return model_dict
 
 
-def init_optim(num_view, model_dict, lr_e=5e-4, lr_c=1e-3):
+def init_optim(num_view, model_dict, lr_e=1e-3, lr_c=1e-3):
     optim_dict = {}
     for i in range(num_view):
         optim_dict["C{:}".format(i+1)] = torch.optim.Adam(
