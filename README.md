@@ -50,13 +50,13 @@ Then, unzip the file and go to the folder.
       
       
 ```
-$ python ./main_MOCO-GCN.py -input ./125ASV_6variables
+$ python ./main_MOCO-GCN.py -input ./125ASV_23variables
 ```
 
 
 ### File descriptions
 
-`-input`: A data foler includes `X.csv` and `Y.csv`. `X.csv` is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 6 or 23 rows are exposome data. `Y.csv` is pancreatic cancer label. `X.csv` looks like:
+`-input`: A data foler includes `X.csv` and `Y.csv`. `X.csv` is a microbiome and exposome abundance matrix, sample as rows, microbiome and exposome as columns, the last 23 rows are exposome data. `Y.csv` is pancreatic cancer label. `X.csv` looks like:
 
 |SampleID|microbe1|microbe2|...|exposusre1|exposure2|...|
 |---|---|---|---|---|---|---|
@@ -112,5 +112,7 @@ utils.py: Supporting functions
 Random Forest:  The 25-repeat stratified fourfold cross-validation random forest
 
 Differential abundance test.r: The analysis of differential abundance testing
+
+mediation analysis.r: The analysis of mediation analysis
 
 
