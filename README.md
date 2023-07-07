@@ -117,4 +117,8 @@ mediation analysis.r: The analysis of mediation analysis
 
 Spearman calculation.r: The calculation of Spearman correlation.
 
+125ASV_23variables: The 125 species and 23 exposures data of Spanish cohort.
 
+DE: The 125 species and 14 exposures data of German cohort.
+
+raw data: The whole microbiome and metadata of Spanish and German cohorts.
